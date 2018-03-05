@@ -4,7 +4,7 @@
 
 The landscape of available Elixir packages for html tooling is overseeable but in that sense also very focused. Each library is there for a distinct use case.
 
-|Library |First commit|Can decode html|Can handle open tags|Supports common CSS|Supports custom CSS|Can manipulate nodes| Use Case |
+|Library |First commit|Can decode html|Can handle open tags|Supports common CSS selectors|Supports custom CSS selectors|Can manipulate nodes| Use Case |
 |--|--|--|--|--|--|--|--|
 |[Floki](https://github.com/philss/floki)         | Nov 2014 | yes | yes | yes (22) | [one, non-standard selector implemented](https://github.com/philss/floki#supported-selectors) | no | parse and select |
 |[HtmlSanitizeEx](https://github.com/rrrene/html_sanitize_ex) | Jul 2015 | no | yes | | | | sanitize |
