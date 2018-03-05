@@ -4,13 +4,13 @@
 
 The landscape of available Elixir packages for html tooling is overseeable but in that sense also very focused. Each library is there for a distinct use case.
 
-|Library |First commit|Can parse html|Can handle open tags|Supports common CSS|Supports custom CSS|Can manipulate nodes| Use Case |
+|Library |First commit|Can decode html|Can handle open tags|Supports common CSS|Supports custom CSS|Can manipulate nodes| Use Case |
 |--|--|--|--|--|--|--|--|
 |[Floki](https://github.com/philss/floki)         | Nov 2014 | yes | yes | yes (22) | [one, non-standard selector implemented](https://github.com/philss/floki#supported-selectors) | no | parse and select |
-|[HtmlSanitizeEx](https://github.com/rrrene/html_sanitize_ex) | Jul 2015 | yes | yes | | | | sanitize |
+|[HtmlSanitizeEx](https://github.com/rrrene/html_sanitize_ex) | Jul 2015 | no | yes | | | | sanitize |
 |[Meeseeks](https://github.com/mischov/meeseeks)  | Feb 2017 | yes | yes | yes (27) | yes |no | custom selector API |
 |[Myhtmlex](https://github.com/Overbryd/myhtmlex) | Aug 2017 | yes | yes | | | | fast decode/encode |
-|[ModestEx](https://github.com/f34nk/modest_ex)   | Feb 2018 | yes | yes | yes (36) | [one, non-standard selector in progress](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md)  | yes | pipeable string transformations |
+|[ModestEx](https://github.com/f34nk/modest_ex)   | Feb 2018 | no | yes | yes (36) | [one, non-standard selector in progress](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md)  | yes | pipeable string transformations |
 
 ## Test and Benchmark
 
