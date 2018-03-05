@@ -4,13 +4,13 @@
 
 The landscape of available Elixir packages for html tooling is overseeable but in that sense also very focused. Each library is there for a distinct use case.
 
-|Library |First commit|Can decode html|Can handle open tags|Supports common CSS selectors|Supports custom CSS selectors|Can manipulate nodes| Use Case |
-|--|--|--|--|--|--|--|--|
-|[Floki](https://github.com/philss/floki)         | Nov 2014 | yes | yes | yes (22) | [one, non-standard selector implemented](https://github.com/philss/floki#supported-selectors) | no | parse and select |
-|[HtmlSanitizeEx](https://github.com/rrrene/html_sanitize_ex) | Jul 2015 | no | yes | | | | sanitize |
-|[Meeseeks](https://github.com/mischov/meeseeks)  | Feb 2017 | yes | yes | yes (27) | yes |no | HTML and XML; custom selectors; CSS and XPath |
-|[Myhtmlex](https://github.com/Overbryd/myhtmlex) | Aug 2017 | yes | yes | | | | fast decode/encode |
-|[ModestEx](https://github.com/f34nk/modest_ex)   | Feb 2018 | no | yes | yes (36) | [one, non-standard selector in progress](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md)  | yes | pipeable string transformations |
+|Library |First commit|HTML5 compliant|Can decode html|Can handle open tags|Supports common CSS selectors|Supports custom CSS selectors|Can manipulate nodes| Use Case |
+|--|--|--|--|--|--|--|--|--|
+|[Floki](https://github.com/philss/floki)         | Nov 2014 | no with default parser; yes with [html5ever](https://github.com/servo/html5ever) parser| yes | yes | yes (22) | [one, non-standard selector implemented](https://github.com/philss/floki#supported-selectors) | yes, but [limited](https://hexdocs.pm/floki/Floki.html#map/2) | parse and select |
+|[HtmlSanitizeEx](https://github.com/rrrene/html_sanitize_ex) | Jul 2015 | | no | yes | | | | sanitize |
+|[Meeseeks](https://github.com/mischov/meeseeks)  | Feb 2017 | yes with [meeseeks_html5ever](https://github.com/mischov/meeseeks_html5ever) | yes | yes | yes (27) | yes |no | HTML and XML; custom selectors; CSS and XPath |
+|[Myhtmlex](https://github.com/Overbryd/myhtmlex) | Aug 2017 | yes, as a binding to [myhtml](https://github.com/lexborisov/myhtml) library | yes | yes | | | | fast decode/encode |
+|[ModestEx](https://github.com/f34nk/modest_ex)   | Feb 2018 | yes, as a binding to [Modest](https://github.com/lexborisov/Modest) library | no | yes | yes (36) | [one, non-standard selector in progress](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md)  | yes | pipeable string transformations |
 
 ## Test and Benchmark
 
