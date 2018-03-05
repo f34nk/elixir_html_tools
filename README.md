@@ -8,7 +8,7 @@ The landscape of available Elixir packages for html tooling is overseeable but i
 |--|--|--|--|--|--|--|--|
 |[Floki](https://github.com/philss/floki)         | Nov 2014 | yes | yes | yes (22) | [one, non-standard selector implemented](https://github.com/philss/floki#supported-selectors) | no | parse and select |
 |[HtmlSanitizeEx](https://github.com/rrrene/html_sanitize_ex) | Jul 2015 | no | yes | | | | sanitize |
-|[Meeseeks](https://github.com/mischov/meeseeks)  | Feb 2017 | yes | yes | yes (27) | yes |no | HTML and XML; custom selector API; CSS or XPath selectors |
+|[Meeseeks](https://github.com/mischov/meeseeks)  | Feb 2017 | yes | yes | yes (27) | yes |no | HTML and XML; custom selectors; CSS or XPath selectors |
 |[Myhtmlex](https://github.com/Overbryd/myhtmlex) | Aug 2017 | yes | yes | | | | fast decode/encode |
 |[ModestEx](https://github.com/f34nk/modest_ex)   | Feb 2018 | no | yes | yes (36) | [one, non-standard selector in progress](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md)  | yes | pipeable string transformations |
 
