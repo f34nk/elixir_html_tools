@@ -26,7 +26,8 @@ defmodule ElixirHtmlTools.MixProject do
 
       {:modest_ex, "~> 1.0.2"},
       {:floki, "~> 0.20.0"},
-      {:meeseeks, "0.7.6"}
+      {:meeseeks, "0.7.6"},
+      {:myhtmlex, "~> 0.2.0"}
     ]
   end
 end

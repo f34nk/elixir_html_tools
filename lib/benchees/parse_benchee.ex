@@ -24,6 +24,9 @@ defmodule ParseBenchee do
     file_350k = File.read!("input/350k.html")
 
     Benchee.run(%{
+      "0.2k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_0_2k)
+      end,
       "0.2k Floki"    => fn ->
         Floki.parse(file_0_2k)
       end,
@@ -44,16 +47,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_0_5k)
       end,
 
-      # "0.6k Floki"    => fn ->
-      #   Floki.parse(file_0_6k)
-      # end,
-      # "0.6k Meeseeks"    => fn ->
-      #   Meeseeks.parse(file_0_6k)
-      # end,
-      # "0.6k ModestEx"    => fn ->
-      #   ModestEx.serialize(file_0_6k)
-      # end,
-
+      "0.8k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_0_8k)
+      end,
       "0.8k Floki"    => fn ->
         Floki.parse(file_0_8k)
       end,
@@ -64,46 +60,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_0_8k)
       end,
 
-      # "0.9k Floki"    => fn ->
-      #   Floki.parse(file_0_9k)
-      # end,
-      # "0.9k Meeseeks"    => fn ->
-      #   Meeseeks.parse(file_0_9k)
-      # end,
-      # "0.9k ModestEx"    => fn ->
-      #   ModestEx.serialize(file_0_9k)
-      # end,
-
-      # "0.95k Floki"    => fn ->
-      #   Floki.parse(file_0_95k)
-      # end,
-      # "0.95k Meeseeks"    => fn ->
-      #   Meeseeks.parse(file_0_95k)
-      # end,
-      # "0.95k ModestEx"    => fn ->
-      #   ModestEx.serialize(file_0_95k)
-      # end,
-
-      # "0.97k Floki"    => fn ->
-      #   Floki.parse(file_0_97k)
-      # end,
-      # "0.97k Meeseeks"    => fn ->
-      #   Meeseeks.parse(file_0_97k)
-      # end,
-      # "0.97k ModestEx"    => fn ->
-      #   ModestEx.serialize(file_0_97k)
-      # end,
-
-      # "0.98k Floki"    => fn ->
-      #   Floki.parse(file_0_98k)
-      # end,
-      # "0.98k Meeseeks"    => fn ->
-      #   Meeseeks.parse(file_0_98k)
-      # end,
-      # "0.98k ModestEx"    => fn ->
-      #   ModestEx.serialize(file_0_98k)
-      # end,
-
+      "1k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_1k)
+      end,
       "1k Floki"    => fn ->
         Floki.parse(file_1k)
       end,
@@ -126,6 +85,9 @@ defmodule ParseBenchee do
     )
 
     Benchee.run(%{
+      "2k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_2k)
+      end,
       "2k Floki"    => fn ->
         Floki.parse(file_2k)
       end,
@@ -136,6 +98,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_2k)
       end,
 
+      "2.5k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_2_5k)
+      end,
       "2.5k Floki"    => fn ->
         Floki.parse(file_2_5k)
       end,
@@ -146,6 +111,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_2_5k)
       end,
 
+      "3k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_3k)
+      end,
       "3k Floki"    => fn ->
         Floki.parse(file_3k)
       end,
@@ -156,6 +124,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_3k)
       end,
 
+      "5k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_5k)
+      end,
       "5k Floki"    => fn ->
         Floki.parse(file_5k)
       end,
@@ -166,6 +137,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_5k)
       end,
 
+      "10k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_10k)
+      end,
       "10k Floki"    => fn ->
         Floki.parse(file_10k)
       end,
@@ -188,6 +162,9 @@ defmodule ParseBenchee do
     )
 
     Benchee.run(%{
+      "50k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_50k)
+      end,
       "50k Floki"    => fn ->
         Floki.parse(file_50k)
       end,
@@ -198,6 +175,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_50k)
       end,
 
+      "100k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_100k)
+      end,
       "100k Floki"    => fn ->
         Floki.parse(file_100k)
       end,
@@ -208,6 +188,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_100k)
       end,
 
+      "150k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_150k)
+      end,
       "150k Floki"    => fn ->
         Floki.parse(file_150k)
       end,
@@ -218,6 +201,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_150k)
       end,
 
+      "200k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_200k)
+      end,
       "200k Floki"    => fn ->
         Floki.parse(file_200k)
       end,
@@ -228,6 +214,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_200k)
       end,
 
+      "350k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_350k)
+      end,
       "350k Floki"    => fn ->
         Floki.parse(file_350k)
       end,
