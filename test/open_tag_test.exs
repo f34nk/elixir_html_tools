@@ -1,6 +1,6 @@
 defmodule OpenTagTest do
   use ExUnit.Case
-  doctest ElixirHtmlTools
+  # doctest ElixirHtmlTools
 
   # broken html
   @html "<div><h1>Hello World</div>"

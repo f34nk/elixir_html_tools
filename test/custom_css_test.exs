@@ -1,11 +1,13 @@
 defmodule CustomCssTest do
   use ExUnit.Case
-  doctest ElixirHtmlTools
+  # doctest ElixirHtmlTools
   import Meeseeks.CSS
 
   @html "<div><h1>Hello World</h1></div>"
 
   test "ModestEx" do
+    result = ModestEx.find(@html, "div h1:contains(Hello)")
+    assert result == "<h1>Hello World</h1>"
   end
   
   test "Myhtmlex" do
