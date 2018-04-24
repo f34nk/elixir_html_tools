@@ -11,7 +11,6 @@ defmodule Mix.Tasks.Benchee do
     {:ok, _pid} = Nodex.Cnode.start_link(%{exec_path: @worker}, name: ModestEx.Safe.Cnode)
 
     ParseBenchee.run()
-    # FindBenchee.run()
-    
+    FindBenchee.run()
   end
 end
