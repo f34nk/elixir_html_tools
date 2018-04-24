@@ -23,16 +23,10 @@ defmodule ElixirHtmlTools.MixProject do
     [
       {:benchfella, "~> 0.3.0"},
       {:benchee_html, "~> 0.4", only: :dev},
-      # {:benchee_csv, "~> 0.7", only: :dev},
 
-      # {:modest_ex, path: "../modest_ex"},
-      # {:modest_ex, github: "f34nk/modest_ex"},
       {:modest_ex, "~> 1.0.2"},
-
-      # {:myhtmlex, "~> 0.2.0"},
       {:floki, "~> 0.20.0"},
-      {:meeseeks, "0.7.6"},
-      # {:html_sanitize_ex, "~> 1.3.0-rc3"}
+      {:meeseeks, "0.7.6"}
     ]
   end
 end
