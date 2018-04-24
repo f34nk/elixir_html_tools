@@ -12,6 +12,7 @@ defmodule ParseBenchee do
     file_50k = File.read!("input/50k.html")
     file_100k = File.read!("input/100k.html")
     file_200k = File.read!("input/200k.html")
+
     file_350k = File.read!("input/350k.html")
 
     Benchee.run(%{
@@ -151,19 +152,6 @@ defmodule ParseBenchee do
       end,
       "200k ModestEx"    => fn ->
         ModestEx.serialize(file_200k)
-      end,
-
-      "350k Myhtmlex"    => fn ->
-        Myhtmlex.decode(file_350k)
-      end,
-      "350k Floki"    => fn ->
-        Floki.parse(file_350k)
-      end,
-      "350k Meeseeks"    => fn ->
-        Meeseeks.parse(file_350k)
-      end,
-      "350k ModestEx"    => fn ->
-        ModestEx.serialize(file_350k)
       end
     },
       formatters: [
@@ -176,5 +164,30 @@ defmodule ParseBenchee do
         # csv: [file: "output/parse_big.csv"]
       ]
     )
+
+    # Benchee.run(%{
+    #   "350k Myhtmlex"    => fn ->
+    #     Myhtmlex.decode(file_350k)
+    #   end,
+    #   "350k Floki"    => fn ->
+    #     Floki.parse(file_350k)
+    #   end,
+    #   "350k Meeseeks"    => fn ->
+    #     Meeseeks.parse(file_350k)
+    #   end,
+    #   "350k ModestEx"    => fn ->
+    #     ModestEx.serialize(file_350k)
+    #   end
+    # },
+    #   formatters: [
+    #     Benchee.Formatters.HTML,
+    #     Benchee.Formatters.Console,
+    #     # Benchee.Formatters.CSV
+    #   ],
+    #   formatter_options: [
+    #     html: [file: "output/parse_very_large.html", auto_open: false],
+    #     # csv: [file: "output/parse_large.csv"]
+    #   ]
+    # )
   end
 end

@@ -25,6 +25,15 @@ The `test` folder contains examples of the library features side by side.
 
 ## Benchmark
 
+Tested versions:
+
+```
+{:modest_ex, "~> 1.0.3"},
+{:floki, "~> 0.20.0"},
+{:meeseeks, "0.7.6"},
+{:myhtmlex, "~> 0.2.0"}
+```
+
 Run benchmarks with:
 
 	mix bench
@@ -86,7 +95,7 @@ bench iterations   average time
 350k         100   22024.88 µs/op
 ```
 
-And the runtime distriubution...
+### And the runtime distriubution...
 
 ![Parsing - runtime - small](https://github.com/f34nk/elixir_html_tools/blob/master/parsing-runtime-small.png)
 ![Parsing - runtime - mid](https://github.com/f34nk/elixir_html_tools/blob/master/parsing-runtime-mid.png)
@@ -96,15 +105,15 @@ And the runtime distriubution...
 
 All parsers except `ModestEx` return html encoded into a list of tuples.
 
-If you are looking for parsing and encoding speed of *smallish* (up to 1kB) html strings you can use `Floki` and `Meeseeks`.
+If you are looking for parsing and encoding speed of *smallish* (up to 1kB) html strings, `Floki` and `Meeseeks` are the fastest.
 
-`Floki` offers all common CSS selectors and some limited features to manipulate nodes.
+`Floki` offers all common CSS selectors and some [limited features](https://hexdocs.pm/floki/Floki.html#map/2) to manipulate nodes.
 
-`Meeseeks` is by far the most flexible. You get a custom selector Api and `Meeseeks` is also able to parse **XML**.
+`Meeseeks` provides a flexible Api for [custom selectors](https://github.com/mischov/meeseeks#custom-selectors). It can also parse **XML**.
 
 If you are looking for a good performance distribution over many file sizes you can use `Myhtmlex`. With that you can encode and decode html super fast.
 
-However, if you don't need encoded html, but you need to do many manipulations on the html string you can use `ModestEx`.
+However, if you don't need encoded html, but you need to do complex manipulations on the html string you can use `ModestEx`. With that you get [**36**](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md) CSS selectors and [**16**](https://github.com/f34nk/modest_ex/blob/master/FEATURES.md) methods to transform html strings.
 
 I hope this was helpful.
 

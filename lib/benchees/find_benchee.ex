@@ -1,6 +1,6 @@
 defmodule FindBenchee do
   import Meeseeks.CSS
-  
+
   def run do
     file_0_2k = File.read!("input/0_2k.html")
     file_0_5k = File.read!("input/0_5k.html")
@@ -13,6 +13,7 @@ defmodule FindBenchee do
     file_50k = File.read!("input/50k.html")
     file_100k = File.read!("input/100k.html")
     file_200k = File.read!("input/200k.html")
+
     file_350k = File.read!("input/350k.html")
 
     Benchee.run(%{
@@ -56,7 +57,7 @@ defmodule FindBenchee do
         Benchee.Formatters.HTML,
         Benchee.Formatters.Console,
         # Benchee.Formatters.CSV
-      ], 
+      ],
       formatter_options: [
         html: [file: "output/find_small.html", auto_open: false],
         # csv: [file: "output/find_small.csv"]
@@ -146,18 +147,6 @@ defmodule FindBenchee do
       end,
       "200k ModestEx"    => fn ->
         ModestEx.find(file_200k, "h1")
-      end,
-
-      "350k Floki"    => fn ->
-        Floki.find(file_350k, "h1")
-      end,
-      "350k Meeseeks"    => fn ->
-        result = Meeseeks.parse(file_350k, :html)
-        |> Meeseeks.one(css("h1"))
-        |> Meeseeks.tree()
-      end,
-      "350k ModestEx"    => fn ->
-        ModestEx.find(file_350k, "h1")
       end
     },
       formatters: [
@@ -170,5 +159,29 @@ defmodule FindBenchee do
         # csv: [file: "output/find_big.csv"]
       ]
     )
+
+    # Benchee.run(%{
+    #   "350k Floki"    => fn ->
+    #     Floki.find(file_350k, "h1")
+    #   end,
+    #   "350k Meeseeks"    => fn ->
+    #     result = Meeseeks.parse(file_350k, :html)
+    #     |> Meeseeks.one(css("h1"))
+    #     |> Meeseeks.tree()
+    #   end,
+    #   "350k ModestEx"    => fn ->
+    #     ModestEx.find(file_350k, "h1")
+    #   end
+    # },
+    #   formatters: [
+    #     Benchee.Formatters.HTML,
+    #     Benchee.Formatters.Console,
+    #     # Benchee.Formatters.CSV
+    #   ],
+    #   formatter_options: [
+    #     html: [file: "output/find_large.html", auto_open: false],
+    #     # csv: [file: "output/find_big.csv"]
+    #   ]
+    # )
   end
 end

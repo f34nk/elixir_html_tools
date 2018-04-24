@@ -5,10 +5,10 @@ defmodule OpenTagTest do
   # broken html
   @html "<div><h1>Hello World</div>"
 
-  test "HtmlSanitizeEx" do
-    result = HtmlSanitizeEx.html5(@html)
-    assert result == "<div><h1>Hello World</h1></div>"
-  end
+  # test "HtmlSanitizeEx" do
+  #   result = HtmlSanitizeEx.html5(@html)
+  #   assert result == "<div><h1>Hello World</h1></div>"
+  # end
 
   test "ModestEx" do
     result = ModestEx.serialize(@html)

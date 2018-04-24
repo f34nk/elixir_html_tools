@@ -24,7 +24,7 @@ defmodule ElixirHtmlTools.MixProject do
       {:benchfella, "~> 0.3.0"},
       {:benchee_html, "~> 0.4", only: :dev},
 
-      {:modest_ex, "~> 1.0.2"},
+      {:modest_ex, "~> 1.0.3"},
       {:floki, "~> 0.20.0"},
       {:meeseeks, "0.7.6"},
       {:myhtmlex, "~> 0.2.0"}

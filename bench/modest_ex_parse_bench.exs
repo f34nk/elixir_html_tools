@@ -20,6 +20,7 @@ defmodule ModestExParseBench do
       File.read!("input/50k.html"),
       File.read!("input/100k.html"),
       File.read!("input/200k.html"),
+
       File.read!("input/350k.html")
     ]
     {:ok, contents}
