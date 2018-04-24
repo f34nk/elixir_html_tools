@@ -2,10 +2,12 @@ defmodule FindBench do
   import Meeseeks.CSS
   
   def run do
-    file_0_2k = File.read!("input/0_2k.html") # 0.file_2k
+    file_0_2k = File.read!("input/0_2k.html") # 0.2k
     file_0_5k = File.read!("input/0_5k.html") # 0.5k
-    file_1k = File.read!("input/1k.html") # file_1k
-    file_2k = File.read!("input/2k.html") # file_2k
+    file_0_8k = File.read!("input/0_8k.html") # 0.8k
+    file_1k = File.read!("input/1k.html") # 1k
+
+    file_2k = File.read!("input/2k.html") # 2k
     file_2_5k = File.read!("input/2_5k.html") # 2.5k
     file_3k = File.read!("input/3k.html") # 3k
     file_5k = File.read!("input/5k.html") # 5k
@@ -14,9 +16,8 @@ defmodule FindBench do
     file_50k = File.read!("input/50k.html") # 50k
     file_100k = File.read!("input/100k.html") # 100k
     file_150k = File.read!("input/150k.html") # 150k
-    file_200k = File.read!("input/100k.html") # 200k
-
-    github_trending_js = File.read!("input/github_trending_js.html") # 34file_1k
+    file_200k = File.read!("input/200k.html") # 200k
+    file_350k = File.read!("input/350k.html") # 350k
 
     Benchee.run(%{
       "0.2k Floki"    => fn ->
@@ -41,6 +42,18 @@ defmodule FindBench do
       end,
       "0.5k ModestEx"    => fn ->
         ModestEx.find(file_0_5k, "h1")
+      end,
+
+      "0.8k Floki"    => fn ->
+        Floki.find(file_0_8k, "h1")
+      end,
+      "0.8k Meeseeks"    => fn ->
+        result = Meeseeks.parse(file_0_8k, :html)
+        |> Meeseeks.one(css("h1"))
+        |> Meeseeks.tree()
+      end,
+      "0.8k ModestEx"    => fn ->
+        ModestEx.find(file_0_8k, "h1")
       end,
 
       "1k Floki"    => fn ->
@@ -113,6 +126,18 @@ defmodule FindBench do
       end,
       "5k ModestEx"    => fn ->
         ModestEx.find(file_5k, "h1")
+      end,
+
+      "10k Floki"    => fn ->
+        Floki.find(file_10k, "h1")
+      end,
+      "10k Meeseeks"    => fn ->
+        result = Meeseeks.parse(file_10k, :html)
+        |> Meeseeks.one(css("h1"))
+        |> Meeseeks.tree()
+      end,
+      "10k ModestEx"    => fn ->
+        ModestEx.find(file_10k, "h1")
       end
     },
       formatters: [
@@ -127,18 +152,6 @@ defmodule FindBench do
     )
 
     Benchee.run(%{
-      "10k Floki"    => fn ->
-        Floki.find(file_10k, "h1")
-      end,
-      "10k Meeseeks"    => fn ->
-        result = Meeseeks.parse(file_10k, :html)
-        |> Meeseeks.one(css("h1"))
-        |> Meeseeks.tree()
-      end,
-      "10k ModestEx"    => fn ->
-        ModestEx.find(file_10k, "h1")
-      end,
-
       "50k Floki"    => fn ->
         Floki.find(file_50k, "h1")
       end,
@@ -187,16 +200,16 @@ defmodule FindBench do
         ModestEx.find(file_200k, "h1")
       end,
 
-      "341k Floki"    => fn ->
-        Floki.find(github_trending_js, "h1")
+      "350k Floki"    => fn ->
+        Floki.find(file_350k, "h1")
       end,
-      "341k Meeseeks"    => fn ->
-        result = Meeseeks.parse(github_trending_js, :html)
+      "350k Meeseeks"    => fn ->
+        result = Meeseeks.parse(file_350k, :html)
         |> Meeseeks.one(css("h1"))
         |> Meeseeks.tree()
       end,
-      "341k ModestEx"    => fn ->
-        ModestEx.find(github_trending_js, "h1")
+      "350k ModestEx"    => fn ->
+        ModestEx.find(file_350k, "h1")
       end
     },
       formatters: [

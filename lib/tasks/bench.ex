@@ -10,7 +10,8 @@ defmodule Mix.Tasks.Bench do
     Nodex.Distributed.up
     {:ok, _pid} = Nodex.Cnode.start_link(%{exec_path: @worker}, name: ModestEx.Safe.Cnode)
 
-    FindBench.run()
     ParseBench.run()
+    # FindBench.run()
+    
   end
 end
