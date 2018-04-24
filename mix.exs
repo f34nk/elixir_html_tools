@@ -21,18 +21,18 @@ defmodule ElixirHtmlTools.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:benchfella, "~> 0.3.0"},
+      {:benchfella, "~> 0.3.0"},
       {:benchee_html, "~> 0.4", only: :dev},
       # {:benchee_csv, "~> 0.7", only: :dev},
 
-      # {:modest_ex, "~> 0.0.13-dev"},
-      # {:modest_ex, "~> 1.0.1"},
-      {:modest_ex, path: "../modest_ex"},
+      # {:modest_ex, path: "../modest_ex"},
+      # {:modest_ex, github: "f34nk/modest_ex"},
+      {:modest_ex, "~> 1.0.2"},
 
-      {:myhtmlex, "~> 0.2.0"},
+      # {:myhtmlex, "~> 0.2.0"},
       {:floki, "~> 0.20.0"},
       {:meeseeks, "0.7.6"},
-      {:html_sanitize_ex, "~> 1.3.0-rc3"}
+      # {:html_sanitize_ex, "~> 1.3.0-rc3"}
     ]
   end
 end

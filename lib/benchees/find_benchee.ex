@@ -1,23 +1,28 @@
-defmodule FindBench do
+defmodule FindBenchee do
   import Meeseeks.CSS
   
   def run do
-    file_0_2k = File.read!("input/0_2k.html") # 0.2k
-    file_0_5k = File.read!("input/0_5k.html") # 0.5k
-    file_0_8k = File.read!("input/0_8k.html") # 0.8k
-    file_1k = File.read!("input/1k.html") # 1k
+    file_0_2k = File.read!("input/0_2k.html")
+    file_0_5k = File.read!("input/0_5k.html")
+    # file_0_6k = File.read!("input/0_6k.html")
+    file_0_8k = File.read!("input/0_8k.html")
+    # file_0_9k = File.read!("input/0_9k.html")
+    # file_0_95k = File.read!("input/0_95k.html")
+    # file_0_97k = File.read!("input/0_97k.html")
+    # file_0_98k = File.read!("input/0_98k.html")
+    file_1k = File.read!("input/1k.html")
 
-    file_2k = File.read!("input/2k.html") # 2k
-    file_2_5k = File.read!("input/2_5k.html") # 2.5k
-    file_3k = File.read!("input/3k.html") # 3k
-    file_5k = File.read!("input/5k.html") # 5k
-    file_10k = File.read!("input/10k.html") # 10k
+    file_2k = File.read!("input/2k.html")
+    file_2_5k = File.read!("input/2_5k.html")
+    file_3k = File.read!("input/3k.html")
+    file_5k = File.read!("input/5k.html")
+    file_10k = File.read!("input/10k.html")
 
-    file_50k = File.read!("input/50k.html") # 50k
-    file_100k = File.read!("input/100k.html") # 100k
-    file_150k = File.read!("input/150k.html") # 150k
-    file_200k = File.read!("input/200k.html") # 200k
-    file_350k = File.read!("input/350k.html") # 350k
+    file_50k = File.read!("input/50k.html")
+    file_100k = File.read!("input/100k.html")
+    file_150k = File.read!("input/150k.html")
+    file_200k = File.read!("input/200k.html")
+    file_350k = File.read!("input/350k.html")
 
     Benchee.run(%{
       "0.2k Floki"    => fn ->

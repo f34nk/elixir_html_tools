@@ -1,19 +1,9 @@
-Operating System: Linux"
-CPU Information: AMD FX(tm)-8300 Eight-Core Processor
-Number of Available Cores: 8
-Available memory: 15.66 GB
-Elixir 1.6.1
-Erlang 20.2
+# Parsing benchmark with benchee
 
-----
+`mix benchee`
 
-# modest_html build WITHOUT threads
+Should print something like this...
 
-## find
-```
-```
-
-## parse
 ```
 Name                    ips        average  deviation         median         99th %
 0.2k Floki          30.41 K       32.89 μs    ±28.94%          33 μs          44 μs
@@ -62,63 +52,4 @@ Name                    ips        average  deviation         median         99t
 350k Meeseeks         20.39       49.05 ms     ±8.11%       50.08 ms       56.20 ms
 200k Floki            13.40       74.64 ms     ±5.82%       73.33 ms       83.85 ms
 350k Floki             4.61      217.11 ms     ±7.87%      218.96 ms      243.37 ms
-```
-
----
-
-# modest_html build WITH threading enabled
-
-## find
-```
-```
-
-## parse
-```
-Name                    ips        average  deviation         median         99th %
-0.2k Floki          29.36 K       34.06 μs    ±27.63%          34 μs          49 μs
-0.5k Floki          18.04 K       55.43 μs    ±22.76%          55 μs          76 μs
-0.2k Meeseeks       12.39 K       80.74 μs    ±56.19%          67 μs         226 μs
-0.5k Meeseeks        9.16 K      109.23 μs    ±49.56%          94 μs         269 μs
-0.8k Floki           7.66 K      130.50 μs    ±10.61%         128 μs         172 μs
-1k Floki             3.91 K      255.55 μs     ±9.68%         253 μs         335 μs
-0.8k Meeseeks        2.62 K      381.35 μs    ±28.73%         381 μs         647 μs
-0.5k ModestEx        1.45 K      690.67 μs    ±22.17%         662 μs     1458.24 μs
-0.2k ModestEx        1.43 K      699.94 μs    ±27.80%         664 μs     1644.96 μs
-0.8k ModestEx        1.36 K      734.58 μs    ±28.78%         701 μs     1517.16 μs
-1k Meeseeks          1.35 K      742.80 μs    ±31.83%         748 μs        1181 μs
-1k ModestEx          1.26 K      792.44 μs    ±37.93%         762 μs     1694.84 μs
-
-Name                    ips        average  deviation         median         99th %
-2k Floki            1747.04        0.57 ms    ±10.62%        0.58 ms        0.76 ms
-2.5k Floki          1361.52        0.74 ms    ±10.72%        0.74 ms        0.99 ms
-3k Floki            1152.93        0.87 ms    ±10.41%        0.86 ms        1.16 ms
-2k ModestEx         1026.07        0.98 ms    ±27.74%        0.94 ms        1.95 ms
-2.5k ModestEx        949.90        1.05 ms    ±23.45%        1.02 ms        1.97 ms
-5k ModestEx          887.75        1.13 ms    ±18.08%        1.10 ms        1.89 ms
-3k ModestEx          886.84        1.13 ms    ±20.06%        1.10 ms        1.92 ms
-5k Floki             850.51        1.18 ms     ±9.51%        1.17 ms        1.50 ms
-10k ModestEx         669.07        1.50 ms    ±20.20%        1.44 ms        2.66 ms
-2k Meeseeks          607.27        1.65 ms    ±26.27%        1.60 ms        2.64 ms
-2.5k Meeseeks        455.05        2.20 ms    ±22.67%        2.11 ms        3.23 ms
-10k Floki            445.71        2.24 ms     ±8.78%        2.23 ms        2.77 ms
-3k Meeseeks          378.11        2.65 ms    ±24.17%        2.58 ms        3.95 ms
-5k Meeseeks          338.47        2.96 ms    ±22.61%        3.11 ms        4.25 ms
-10k Meeseeks         213.88        4.68 ms    ±28.57%        4.54 ms        7.50 ms
-
-Name                    ips        average  deviation         median         99th %
-50k ModestEx         350.97        2.85 ms    ±13.29%        2.77 ms        4.19 ms
-100k ModestEx        221.32        4.52 ms    ±14.84%        4.42 ms        6.84 ms
-150k ModestEx        143.53        6.97 ms    ±10.67%        6.76 ms        9.80 ms
-200k ModestEx        131.71        7.59 ms    ±14.19%        7.40 ms       11.61 ms
-50k Floki            121.78        8.21 ms    ±11.50%        8.05 ms       10.24 ms
-50k Meeseeks          90.33       11.07 ms    ±25.11%       10.78 ms       17.38 ms
-350k ModestEx         73.56       13.60 ms    ±13.34%       13.35 ms       18.85 ms
-100k Floki            64.21       15.58 ms     ±7.17%       15.61 ms       20.56 ms
-100k Meeseeks         58.75       17.02 ms    ±19.10%       16.93 ms       23.27 ms
-150k Floki            37.34       26.78 ms     ±5.40%       26.49 ms       32.44 ms
-200k Meeseeks         36.22       27.61 ms     ±9.70%       27.98 ms       34.17 ms
-150k Meeseeks         34.66       28.85 ms    ±12.68%       28.94 ms       38.35 ms
-350k Meeseeks         20.03       49.93 ms     ±9.55%       49.62 ms       66.96 ms
-200k Floki            13.34       74.94 ms     ±6.36%       74.00 ms       88.98 ms
-350k Floki             4.79      208.66 ms     ±7.82%      205.90 ms      233.97 ms
 ```

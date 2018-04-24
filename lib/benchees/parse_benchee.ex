@@ -1,14 +1,14 @@
-defmodule ParseBench do
+defmodule ParseBenchee do
 
   def run do
     file_0_2k = File.read!("input/0_2k.html")
     file_0_5k = File.read!("input/0_5k.html")
-    file_0_6k = File.read!("input/0_6k.html")
+    # file_0_6k = File.read!("input/0_6k.html")
     file_0_8k = File.read!("input/0_8k.html")
-    file_0_9k = File.read!("input/0_9k.html")
-    file_0_95k = File.read!("input/0_95k.html")
-    file_0_97k = File.read!("input/0_97k.html")
-    file_0_98k = File.read!("input/0_98k.html")
+    # file_0_9k = File.read!("input/0_9k.html")
+    # file_0_95k = File.read!("input/0_95k.html")
+    # file_0_97k = File.read!("input/0_97k.html")
+    # file_0_98k = File.read!("input/0_98k.html")
     file_1k = File.read!("input/1k.html")
 
     file_2k = File.read!("input/2k.html")

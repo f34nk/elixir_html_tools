@@ -13,7 +13,7 @@
   "meeseeks": {:hex, :meeseeks, "0.7.6", "8404ac005077fd4ba275336c44783caa29f6399a570a409b05dd19fcf6442395", [:mix], [{:meeseeks_html5ever, "~> 0.8.0", [hex: :meeseeks_html5ever, optional: false]}]},
   "meeseeks_html5ever": {:hex, :meeseeks_html5ever, "0.8.1", "8b10ad450d31b99408e570fab5f8e26aad9fa1cd2d6da0b99b5aa0a216809896", [:mix], [{:rustler, "~> 0.16", [hex: :rustler, optional: false]}]},
   "mochiweb": {:hex, :mochiweb, "2.15.0", "e1daac474df07651e5d17cc1e642c4069c7850dc4508d3db7263a0651330aacc", [:rebar3], []},
-  "modest_ex": {:hex, :modest_ex, "1.0.1", "8040758236b4287724ee2ffacbc8763ebd2aa6ded1ede950bd33807dd7e3a132", [:mix], [{:nodex, "~> 0.1.1", [hex: :nodex, optional: false]}]},
+  "modest_ex": {:hex, :modest_ex, "1.0.2", "6d9ffd5f0ae07893e9fb9229f4a095d61fedd5ba9d3e621700ef1576fc9066dd", [:mix], [{:nodex, "~> 0.1.1", [hex: :nodex, optional: false]}]},
   "myhtmlex": {:hex, :myhtmlex, "0.2.1", "d6f3eb1826f7cdaa0225a996569da0930d1a334405510845c905ae59295ab226", [:make, :mix], [{:nodex, "~> 0.1.1", [hex: :nodex, optional: false]}]},
   "nodex": {:hex, :nodex, "0.1.1", "ed2f7bbe19ea62a43ad4b7ad332eb3f9ca12c64a35a5802a0eb545b93ebe32af", [:mix], []},
   "parallel_stream": {:hex, :parallel_stream, "1.0.6", "b967be2b23f0f6787fab7ed681b4c45a215a81481fb62b01a5b750fa8f30f76c", [:mix], []},
