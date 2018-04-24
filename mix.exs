@@ -23,6 +23,7 @@ defmodule ElixirHtmlTools.MixProject do
     [
       # {:benchfella, "~> 0.3.0"},
       {:benchee_html, "~> 0.4", only: :dev},
+      # {:benchee_csv, "~> 0.7", only: :dev},
 
       # {:modest_ex, "~> 0.0.13-dev"},
       # {:modest_ex, "~> 1.0.1"},

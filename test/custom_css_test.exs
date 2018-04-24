@@ -6,6 +6,8 @@ defmodule CustomCssTest do
   @html "<div><h1>Hello World</h1></div>"
 
   test "ModestEx" do
+    result = ModestEx.find(@html, "div h1:contains(Hello)")
+    assert result == "<h1>Hello World</h1>"
   end
   
   test "Myhtmlex" do

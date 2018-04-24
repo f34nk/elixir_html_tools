@@ -50,9 +50,13 @@ defmodule ParseBench do
     },
       formatters: [
         Benchee.Formatters.HTML,
-        Benchee.Formatters.Console
+        Benchee.Formatters.Console,
+        # Benchee.Formatters.CSV
       ],
-      formatter_options: [html: [file: "output/parse_smaller.html", auto_open: false]]
+      formatter_options: [
+        html: [file: "output/parse_small.html", auto_open: false],
+        # csv: [file: "output/parse_small.csv"]
+      ]
     )
 
     Benchee.run(%{
@@ -98,9 +102,13 @@ defmodule ParseBench do
     },
       formatters: [
         Benchee.Formatters.HTML,
-        Benchee.Formatters.Console
+        Benchee.Formatters.Console,
+        # Benchee.Formatters.CSV
       ],
-      formatter_options: [html: [file: "output/parse_small.html", auto_open: false]]
+      formatter_options: [
+        html: [file: "output/parse_mid.html", auto_open: false],
+        # csv: [file: "output/parse_mid.csv"]
+      ]
     )
 
     Benchee.run(%{
@@ -166,9 +174,13 @@ defmodule ParseBench do
     },
       formatters: [
         Benchee.Formatters.HTML,
-        Benchee.Formatters.Console
+        Benchee.Formatters.Console,
+        # Benchee.Formatters.CSV
       ],
-      formatter_options: [html: [file: "output/parse_big.html", auto_open: false]]
+      formatter_options: [
+        html: [file: "output/parse_big.html", auto_open: false],
+        # csv: [file: "output/parse_big.csv"]
+      ]
     )
   end
 end
