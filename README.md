@@ -5,11 +5,11 @@
 The landscape of available Elixir packages for html tooling is overseeable but in that sense also very focused. Each library is there for a distinct use case.
 
 |Library |HTML5 compliant|Can decode html|Can handle open tags|Supports common CSS selectors|Supports custom CSS selectors|Can manipulate nodes| Use Case |
-|--|--|--|--|--|--|--|--|--|
-|[Floki](https://github.com/philss/floki) (First commit Nov 2014)| no with default parser; yes with [html5ever](https://github.com/servo/html5ever) parser (*) | yes | yes | yes (22) | [non-standard selector implemented](https://github.com/philss/floki#supported-selectors) | yes, but [limited](https://hexdocs.pm/floki/Floki.html#map/2) | parse and select |
-|[Meeseeks](https://github.com/mischov/meeseeks) (First commit Feb 2017) | yes with [meeseeks_html5ever](https://github.com/mischov/meeseeks_html5ever) (*) | yes | yes | yes (27) | yes |no | HTML and XML; custom selectors; CSS and XPath |
-|[Myhtmlex](https://github.com/Overbryd/myhtmlex) (First commit Aug 2017) | yes, as a binding to [myhtml](https://github.com/lexborisov/myhtml) library | yes | yes | | | | fast decode/encode |
-|[ModestEx](https://github.com/f34nk/modest_ex) (First commit Feb 2018) | yes, as a binding to [Modest](https://github.com/lexborisov/Modest) library | no | yes | yes (38) | [non-standard selector implemented](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md)  | yes | pipeable string transformations |
+|--|--|--|--|--|--|--|--|
+|[Floki](https://github.com/philss/floki)         | no with default parser; yes with [html5ever](https://github.com/servo/html5ever) parser (*) | yes | yes | yes (22) | [non-standard selector implemented](https://github.com/philss/floki#supported-selectors) | yes, but [limited](https://hexdocs.pm/floki/Floki.html#map/2) | parse and select |
+|[Meeseeks](https://github.com/mischov/meeseeks)  | yes with [meeseeks_html5ever](https://github.com/mischov/meeseeks_html5ever) (*) | yes | yes | yes (27) | yes |no | HTML and XML; custom selectors; CSS and XPath |
+|[Myhtmlex](https://github.com/Overbryd/myhtmlex) | yes, as a binding to [myhtml](https://github.com/lexborisov/myhtml) library | yes | yes | | | | fast decode/encode |
+|[ModestEx](https://github.com/f34nk/modest_ex)   | yes, as a binding to [Modest](https://github.com/lexborisov/Modest) library | no | yes | yes (36) | [non-standard selector implemented](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md)  | yes | pipeable string transformations |
 
 (*) There is also a **separate** benchmark availbale for [Meeseeks vs. Floki Performance](https://github.com/mischov/meeseeks_floki_bench).
 
@@ -85,8 +85,6 @@ bench iterations   average time
 200k         500   4934.63 µs/op
 350k         100   11710.41 µs/op
 ```
-
-![Parsing - Iterations per second - small](https://github.com/f34nk/elixir_html_tools/blob/master/parse_small_ips.png)
 
 ## Conclusions
 
