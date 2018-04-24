@@ -102,9 +102,11 @@ bench iterations   average time
 350k         100   20467.43 µs/op
 ```
 
-![Parsing - Iterations per second - small](parsing-ips-small.png)
-![Parsing - Iterations per second - mid](parsing-ips-mid.png)
-![Parsing - Iterations per second - big](parsing-ips-big.png)
+And the average parsing iterations per second ...
+
+![Parsing - Iterations per second - small](https://github.com/f34nk/elixir_html_tools/blob/master/parsing-ips-small.png)
+![Parsing - Iterations per second - mid](https://github.com/f34nk/elixir_html_tools/blob/master/parsing-ips-mid.png)
+![Parsing - Iterations per second - big](https://github.com/f34nk/elixir_html_tools/blob/master/parsing-ips-big.png)
 
 ## Conclusions
 
