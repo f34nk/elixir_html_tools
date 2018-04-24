@@ -1,6 +1,6 @@
 defmodule ParseTest do
   use ExUnit.Case
-  doctest ElixirHtmlTools
+  # doctest ElixirHtmlTools
   
   @html "<h1>Hello World</h1>"
 

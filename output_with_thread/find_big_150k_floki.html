@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.6.1</li>
+    <li>Erlang: 20.2</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 15.66 GB</li>
+    <li>CPU Information: AMD FX(tm)-8300 Eight-Core Processor</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    <article>
+      <h2>
+        <a name="150k Floki"></a>
+        150k Floki
+        <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+          <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="Graphs showing the individual run time distribution for 150k Floki.
+Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+Raw Run Times shows all individual recorded run times in the order they were recorded in."
+          ></i>
+        </a>
+      </h2>
+
+      <section>
+        <h3>Data Table</h3>
+<table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      <th>Iterations per Second</th>
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>median</th>
+      <th>minimum</th>
+      <th>maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <tr>
+        
+          <td class="text-left">150k Floki</td>
+        
+        <td>23.20</td>
+        <td>43.11 ms</td>
+        <td>±9.08%</td>
+        <td>43.18 ms</td>
+        <td>34.52 ms</td>
+        <td>53.31 ms</td>
+        <td>116</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+      </section>
+
+      <section class="benchee-plot-container">
+        <div id="sorted-run-times" class="plot" data-job-name="150k Floki"></div>
+      </section>
+      <section class="benchee-plot-container">
+        <div id="raw-run-times" class="plot" data-job-name="150k Floki"></div>
+      </section>
+    </article>
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 0.13.0 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 0.5.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var measurements = {"run_times":[41047,45127,44798,50587,42041,47929,41753,44055,40577,44409,43817,47094,47523,46690,46433,46993,48401,47516,43185,41889,39326,43604,40316,44684,42936,42339,43928,41735,44350,42831,42377,41383,42143,48110,44267,44493,44901,45193,41905,44811,49912,44151,42982,53309,44108,43510,44783,44300,45595,49814,44809,46223,49082,49205,45415,44726,44059,49375,41078,38063,43167,41096,40623,38232,39100,38537,36938,37483,36568,42203,40390,34828,38582,38632,38867,38953,37126,34663,38700,35212,37454,34523,40218,39914,41712,50267,47584,37322,39882,47415,46211,42052,40379,43605,41001,47357,39630,48587,42870,42537,43523,43411,49454,36572,37385,40618,45044,44437,41540,45498,44622,50977,42006,42407,43183,47541],"statistics":{"average":43108.90517241379,"ips":23.197063251792326,"maximum":53309,"median":43184.0,"minimum":34523,"mode":null,"percentiles":{"50":43184.0,"99":52912.56},"sample_size":116,"std_dev":3913.3983474356587,"std_dev_ips":2.105814300591794,"std_dev_ratio":0.09077934899492453}};
+      var runTimes     = measurements.run_times;
+      var statistics   = measurements.statistics;
+
+      var inputHeadline = ""
+
+      drawRawRunTimeCharts(runTimes, inputHeadline, statistics);
+      drawRunTimeHistograms(runTimes, inputHeadline);
+    </script>
+  </body>
+</html>

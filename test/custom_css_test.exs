@@ -1,6 +1,6 @@
 defmodule CustomCssTest do
   use ExUnit.Case
-  doctest ElixirHtmlTools
+  # doctest ElixirHtmlTools
   import Meeseeks.CSS
 
   @html "<div><h1>Hello World</h1></div>"

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Benchee Report</title>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/benchee.css">
+    <link rel="stylesheet" type="text/css" href="assets/fontello/css/fontello.css">
+  
+</head>
+
+  <body>
+
+    <div class="header">
+  <h1>benchee report</h1>
+  
+
+  <span class="version-note">
+  <a href="javascript:toggleSystemDataInfo();" title="Click to toggle system info">System info</a>
+</span>
+
+</div>
+
+
+    <article id="system-info" class="benchee-systeminfo" >
+  <h3>System info</h3>
+  <ul class="benchee-systeminfo-list">
+    <li>Elixir: 1.6.1</li>
+    <li>Erlang: 20.2</li>
+    <li>Operating system: Linux</li>
+    <li>Available memory: 15.66 GB</li>
+    <li>CPU Information: AMD FX(tm)-8300 Eight-Core Processor</li>
+    <li>Number of Available Cores: 8</li>
+  </ul>
+</article>
+
+
+    <article>
+      <h2>
+        <a name="341k ModestEx"></a>
+        341k ModestEx
+        <a href="https://github.com/PragTob/benchee_html/wiki/Chart-Types#individual">
+          <i
+            class="benchee-help-icon icon-question-circle-o"
+            title="Graphs showing the individual run time distribution for 341k ModestEx.
+Run Times Histogram shows the distribution of occurrences of specific run times in buckets.
+Raw Run Times shows all individual recorded run times in the order they were recorded in."
+          ></i>
+        </a>
+      </h2>
+
+      <section>
+        <h3>Data Table</h3>
+<table>
+  <thead>
+    <tr>
+      <th class="text-left">Name</th>
+      <th>Iterations per Second</th>
+      <th>Average</th>
+      <th>Deviation</th>
+      <th>median</th>
+      <th>minimum</th>
+      <th>maximum</th>
+      <th>Sample size</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <tr>
+        
+          <td class="text-left">341k ModestEx</td>
+        
+        <td>95.63</td>
+        <td>10.46 ms</td>
+        <td>±5.25%</td>
+        <td>10.38 ms</td>
+        <td>9.52 ms</td>
+        <td>15.46 ms</td>
+        <td>478</td>
+      </tr>
+    
+  </tbody>
+</table>
+
+      </section>
+
+      <section class="benchee-plot-container">
+        <div id="sorted-run-times" class="plot" data-job-name="341k ModestEx"></div>
+      </section>
+      <section class="benchee-plot-container">
+        <div id="raw-run-times" class="plot" data-job-name="341k ModestEx"></div>
+      </section>
+    </article>
+
+    <footer>
+      <a href="https://github.com/PragTob/benchee" target="blank">benchee version: 0.13.0 </a>
+<br/>
+<a href="https://github.com/PragTob/benchee_html" target="blank">benchee_html version: 0.5.0</a>
+
+
+    </footer>
+
+    
+  <script src="assets/javascripts/plotly-1.30.1.min.js"></script>
+  <script src="assets/javascripts/benchee.js"></script>
+
+
+
+    <script>
+      var measurements = {"run_times":[10177,10170,10143,10700,9896,15458,10446,10062,10315,9632,10029,10503,10108,9737,9793,9569,9870,9891,10233,9724,9792,9767,10218,9778,11551,9854,10295,9780,9986,9697,9895,9830,9850,9762,9582,10255,11328,10541,10364,10135,10153,10445,9785,9988,10036,10074,9754,9946,10149,9790,10111,9763,9521,10685,10129,9740,10049,9763,10023,10202,9931,9815,10024,9965,9639,10128,9932,9956,10059,9980,9556,9906,9771,10012,10366,10212,10583,10687,10704,10575,10672,10045,10664,10763,9982,10819,10544,10215,9857,10248,10099,9828,10171,10413,10049,10178,10049,10090,10179,10159,9809,10292,10152,9835,10189,10336,9932,10175,10166,9789,10246,10249,9927,10360,10198,9853,10116,10149,9871,10087,10205,10468,10669,10444,10309,10642,10641,10518,10725,10639,10019,10694,10502,10503,11314,10857,10209,10789,10753,10196,10466,10288,10030,10649,10586,10164,10369,10679,9713,10177,9912,9567,9970,10020,9760,9885,9938,9727,9945,9933,9864,9775,9728,10059,9835,9757,9959,9858,9797,9648,9818,9952,9882,9890,9902,9771,10099,10333,10050,10227,10287,10235,10173,11460,10273,9856,10306,10060,9958,9946,9942,10050,10198,10314,9929,10256,10078,9863,9772,9881,9752,10048,9970,9849,10282,9964,10179,10223,10049,9924,10298,10007,9931,10320,9847,9804,10001,9909,9626,9866,10182,10062,10112,10493,10004,10289,10017,10021,10281,10239,9994,10213,10054,11086,10845,10759,10595,10707,10525,10711,10462,10443,10509,10768,10396,10713,10308,10460,10235,10314,10670,10616,10402,10774,10281,10897,10435,10516,10892,10981,10387,10730,10429,10738,10774,10418,10510,10605,10699,9983,9824,10081,9830,9879,9877,9794,10056,10271,9737,10019,9973,10939,10820,11006,10894,11017,10297,10506,10964,10418,10846,11211,10747,10726,10273,9860,10362,10005,10198,10247,10643,10000,10495,10662,10186,11481,11110,11213,11507,11302,11537,10921,10503,10512,10600,10823,10316,10477,11034,10442,10470,10966,9939,10225,10981,10333,10368,10882,11264,11081,11174,11084,10920,11173,11044,10665,11060,10877,10386,10840,10684,10987,10856,11000,10898,10726,11073,10667,10952,11331,10765,11018,11015,10907,11015,11037,10780,11135,11253,10707,10985,11560,11168,11075,11089,10791,11126,11272,10976,11143,11011,10531,11136,11327,10988,11023,10741,10384,11074,10970,10259,11274,10722,10777,10890,10592,10321,10831,10893,10712,11231,11111,10922,11111,11001,10769,10914,11331,11159,11204,11135,11219,11315,11284,10968,11159,11071,10635,11092,10805,10428,10734,10808,10248,10597,10784,10280,10521,10981,11047,11346,11245,11301,11345,11264,11520,11361,11213,11118,11419,10804,10641,9933,11021,10717,10072,10985,10724,10025,11231,10804,10755,11026,11031,10861,11102,10616,10939,11077,10852,10709,10967,10787,10898,11034,11071,10993,10697,11222,10587,12156,10943,10875,11053,10829,11732,11329,11021,10320,10092,9518,9826,10307,9928,10021,10007,9690,10452],"statistics":{"average":10457.263598326359,"ips":95.62731116006732,"maximum":15458,"median":10376.5,"minimum":9518,"mode":10049,"percentiles":{"50":10376.5,"99":11552.89},"sample_size":478,"std_dev":549.4041155217387,"std_dev_ips":5.024071336982208,"std_dev_ratio":0.052538038307618884}};
+      var runTimes     = measurements.run_times;
+      var statistics   = measurements.statistics;
+
+      var inputHeadline = ""
+
+      drawRawRunTimeCharts(runTimes, inputHeadline, statistics);
+      drawRunTimeHistograms(runTimes, inputHeadline);
+    </script>
+  </body>
+</html>
