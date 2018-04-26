@@ -10,8 +10,8 @@ defmodule Mix.Tasks.Benchee do
     Nodex.Distributed.up
     {:ok, _pid} = Nodex.Cnode.start_link(%{exec_path: @worker}, name: ModestEx.Safe.Cnode)
 
-    CustomCssBenchee.run()
+    # CustomCssBenchee.run()
     ParseBenchee.run()
-    FindBenchee.run()
+    # FindBenchee.run()
   end
 end

@@ -1,15 +1,20 @@
-*I do not intend to give a complete analysis here. If something is missing or plain wrong send me a message or feel invited to participate in the [forum discussion](https://elixirforum.com/t/overview-of-available-html-tools-in-elixir/12905).*
+*I do not intend to give a complete analysis here. If something is missing or plain wrong send me a message or feel invited to participate in the [forum discussion](https://elixirforum.com/t/overview-of-available-html-tools-in-elixir/12905) or create an **Issue** or submit a **PR**.*
 
 # Html tools in Elixir
 
 The landscape of available Elixir packages for html tooling is overseeable but in that sense also very focused. Each library is there for a distinct use case.
 
-|Library |HTML5 compliant|Can decode html|Can handle open tags|Supports common CSS selectors|Supports custom CSS selectors|Can manipulate nodes| Use Case |
-|--|--|--|--|--|--|--|--|
-|[Floki](https://github.com/philss/floki)         | no with default parser; yes with [html5ever](https://github.com/servo/html5ever) parser (*) | yes | yes | yes (22) | [non-standard selector implemented](https://github.com/philss/floki#supported-selectors) | yes, but [limited](https://hexdocs.pm/floki/Floki.html#map/2) | parse and select |
-|[Meeseeks](https://github.com/mischov/meeseeks)  | yes with [meeseeks_html5ever](https://github.com/mischov/meeseeks_html5ever) (*) | yes | yes | yes (27) | yes |no | HTML and XML; custom selectors; CSS and XPath |
-|[Myhtmlex](https://github.com/Overbryd/myhtmlex) | yes, as a binding to [myhtml](https://github.com/lexborisov/myhtml) library | yes | yes | | | | fast decode/encode |
-|[ModestEx](https://github.com/f34nk/modest_ex)   | yes, as a binding to [Modest](https://github.com/lexborisov/Modest) library | no | yes | yes (36) | [non-standard selector implemented](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md)  | yes | pipeable string transformations |
+|   | **[Floki](https://github.com/philss/floki)** | **[Meeseeks](https://github.com/mischov/meeseeks)** | **[Myhtmlex](https://github.com/Overbryd/myhtmlex)** | **[ModestEx](https://github.com/f34nk/modest_ex)** |
+|  :------ | :------ | :------ | :------ | :------ |
+|  **First Commit** | Nov 2014 | Feb 2017 | Aug 2017 | Feb 2018 |
+|  **HTML5 compliant** | no with default parser; yes with [html5ever](https://github.com/servo/html5ever) parser (*) | yes with [meeseeks_html5ever](https://github.com/mischov/meeseeks_html5ever) (*) | yes, as a binding to [myhtml](https://github.com/lexborisov/myhtml) | yes, as a binding to [Modest](https://github.com/lexborisov/Modest) library |
+|  **Can parse XML** |  | yes |  |  |
+|  **Supports XPath selectors** |  | yes |  |  |
+|  **Supports common CSS selectors** | yes (22) | yes (27) |  | yes (36) |
+|  **Supports custom CSS selectors** | [non-standard selector implemented](https://github.com/philss/floki#supported-selectors) | yes, flexible [Api for custom selectors](https://github.com/mischov/meeseeks#custom-selectors) |  | [non-standard selector implemented](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md) |
+|  **Can manipulate nodes** | yes, but limited |  |  | yes |
+|  **Parser return type** | `{tag_name, attributes, children_nodes}` | `Meeseeks.Document` | `{tag_name, attributes, children_nodes}` | `String` |
+|  **Use Case** | parse and select | supports HTML and XML; custom selectors; CSS and XPath | fast HTML decode/encode | pipeable string transformations; provides 16 functions to manipulate HTML |
 
 (*) There is also a **separate** benchmark availbale for [Meeseeks vs. Floki Performance](https://github.com/mischov/meeseeks_floki_bench).
 
@@ -36,85 +41,83 @@ Tested versions:
 
 Run benchmarks with:
 
-	mix bench
+	MIX_ENV=prod mix bench
 
 and
 
-	mix benchee
+	MIX_ENV=prod mix benchee
 
 On my AMD FX-8300 Eight-Core Processor, 15 Gb Ram, Ubuntu 14.04, the benchmarks looks something like this:
 
 ```
 ## FlokiParseBench
 bench iterations   average time 
-0.2k       50000   46.96 µs/op
-0.5k       20000   78.14 µs/op
-1k          5000   299.29 µs/op
-2k          5000   643.46 µs/op
-5k          1000   1566.74 µs/op
-10k          500   3738.13 µs/op
-50k          100   16633.17 µs/op
-100k          50   31089.86 µs/op
-200k          20   80855.40 µs/op
-350k          10   212921.20 µs/op
+0.2k       50000   45.17 µs/op
+0.5k       50000   73.61 µs/op
+1k         10000   288.74 µs/op
+2k          5000   600.32 µs/op
+5k          1000   1481.67 µs/op
+10k          500   3545.02 µs/op
+50k          100   15679.37 µs/op
+100k          50   28954.36 µs/op
+200k          20   74226.80 µs/op
+350k          10   210017.00 µs/op
 ## MeeseeksParseBench
 bench iterations   average time 
-0.5k       50000   78.05 µs/op
-0.2k       20000   82.11 µs/op
-1k          5000   725.30 µs/op
-2k          1000   1907.57 µs/op
-5k          1000   2644.21 µs/op
-10k          500   5066.71 µs/op
-50k          100   12018.79 µs/op
-100k         100   20542.05 µs/op
-200k          50   33380.84 µs/op
-350k          50   63699.30 µs/op
+0.2k       20000   102.49 µs/op
+0.5k       10000   111.47 µs/op
+1k          2000   834.50 µs/op
+2k          1000   1847.98 µs/op
+5k          1000   2527.89 µs/op
+10k          500   5866.91 µs/op
+50k          100   12082.46 µs/op
+100k         100   20170.01 µs/op
+200k          50   32905.52 µs/op
+350k          50   59190.88 µs/op
 ## ModestExParseBench
 bench iterations   average time 
-1k         10000   195.73 µs/op
-0.5k       10000   227.12 µs/op
-0.2k       10000   246.35 µs/op
-2k         10000   277.45 µs/op
-5k          5000   388.42 µs/op
-10k         5000   662.94 µs/op
-50k         1000   1584.91 µs/op
-100k        1000   2980.92 µs/op
-200k         500   5153.64 µs/op
-350k         100   11864.11 µs/op
+1k         10000   169.83 µs/op
+0.2k       10000   215.10 µs/op
+0.5k       10000   215.12 µs/op
+2k          5000   293.92 µs/op
+5k          5000   351.26 µs/op
+10k         2000   680.77 µs/op
+50k         1000   1970.18 µs/op
+100k        1000   2881.24 µs/op
+200k         500   4817.06 µs/op
+350k         100   11052.43 µs/op
 ## MyhtmlexParseBench
 bench iterations   average time 
-0.2k        5000   396.43 µs/op
-0.5k        5000   398.94 µs/op
-1k          5000   544.37 µs/op
-2k          2000   785.65 µs/op
-5k          1000   1078.89 µs/op
-10k         1000   1621.88 µs/op
-50k          500   3221.85 µs/op
-100k         500   5343.96 µs/op
-200k         200   8540.17 µs/op
-350k         100   22024.88 µs/op
+0.5k        5000   382.27 µs/op
+0.2k        5000   384.79 µs/op
+1k          5000   501.17 µs/op
+2k          2000   751.74 µs/op
+5k          1000   1023.89 µs/op
+10k         1000   1495.64 µs/op
+50k         1000   2886.59 µs/op
+100k         500   4537.16 µs/op
+200k         200   7574.88 µs/op
+350k         100   20775.40 µs/op
 ```
-
-### And the runtime distriubution...
-
-![Parsing - runtime - small](https://github.com/f34nk/elixir_html_tools/blob/master/parsing-runtime-small.png)
-![Parsing - runtime - mid](https://github.com/f34nk/elixir_html_tools/blob/master/parsing-runtime-mid.png)
-![Parsing - runtime - big](https://github.com/f34nk/elixir_html_tools/blob/master/parsing-runtime-big.png)
 
 ## Conclusions
 
-All parsers except `ModestEx` return html encoded into a list of tuples.
+The ecosystem of tools is still quite young. There is more to come.
 
-If you are looking for parsing and encoding speed of *smallish* (up to 1kB) html strings, `Floki` and `Meeseeks` are the fastest.
+As [mentioned in the forum](https://elixirforum.com/t/html-tools-in-elixir/12905/16): in this test, Floki does **not** use the html5 compliant parser, since it is not supported by the latest Erlang version.
+
+Nonetheless, a very rough user guideline could be:
+
+If you are looking for parsing speed of *smallish* (up to 1kB) html strings, `Floki` and `Meeseeks` are the fastest.
 
 `Floki` offers all common CSS selectors and some [limited features](https://hexdocs.pm/floki/Floki.html#map/2) to manipulate nodes.
 
-`Meeseeks` provides a flexible Api for [custom selectors](https://github.com/mischov/meeseeks#custom-selectors). It can also parse **XML**.
+`Meeseeks` provides a [flexible Api for custom selectors](https://github.com/mischov/meeseeks#custom-selectors). It can also parse **XML** and supports **XPath** selectors.
 
 If you are looking for a good performance distribution over many file sizes you can use `Myhtmlex`. With that you can encode and decode html super fast.
 
-However, if you don't need encoded html, but you need to do complex manipulations on the html string you can use `ModestEx`. With that you get [**36**](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md) CSS selectors and [**16**](https://github.com/f34nk/modest_ex/blob/master/FEATURES.md) methods to transform html strings.
+However, if you need to do complex manipulations on the html string you can use `ModestEx`. With that you get [**36**](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md) CSS selectors and [**16**](https://github.com/f34nk/modest_ex/blob/master/FEATURES.md) methods to transform html strings.
 
-I hope this was helpful.
+All in all, I would say, the focused nature of the tools makes it easy for the user to pick the right tool for the job.
 
 Best, f34nk

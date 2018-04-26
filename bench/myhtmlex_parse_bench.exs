@@ -1,7 +1,11 @@
 defmodule MyhtmlexParseBench do
   use Benchfella
 
+  @worker "deps/myhtmlex/priv/myhtml_worker"
+
   setup_all do
+    Nodex.Distributed.up
+    {:ok, _pid} = Nodex.Cnode.start_link(%{exec_path: @worker}, name: Myhtmlex.Safe.Cnode)
     contents = [
       File.read!("input/0_2k.html"),
       File.read!("input/0_5k.html"),

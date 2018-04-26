@@ -22,12 +22,14 @@ defmodule ElixirHtmlTools.MixProject do
   defp deps do
     [
       {:benchfella, "~> 0.3.0"},
-      {:benchee_html, "~> 0.4", only: :dev},
+      {:benchee_html, "~> 0.4"},
 
       {:modest_ex, "~> 1.0.3"},
       {:floki, "~> 0.20.0"},
+      # {:html5ever, "~> 0.5.0"},
       {:meeseeks, "0.7.6"},
       {:myhtmlex, "~> 0.2.0"}
+      # {:myhtmlex, "~> 0.2.0", runtime: false}
     ]
   end
 end

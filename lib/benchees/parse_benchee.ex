@@ -29,6 +29,9 @@ defmodule ParseBenchee do
         ModestEx.serialize(file_0_2k)
       end,
 
+      "0.5k Myhtmlex"    => fn ->
+        Myhtmlex.decode(file_0_5k)
+      end,
       "0.5k Floki"    => fn ->
         Floki.parse(file_0_5k)
       end,
