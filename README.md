@@ -78,19 +78,6 @@ bench iterations   average time
 200k          50   31757.00 µs/op
 350k          50   60043.98 µs/op
 
-## ModestExParseBench
-bench iterations   average time 
-1k         10000   181.77 µs/op
-0.2k       10000   216.83 µs/op
-0.5k       10000   221.71 µs/op
-2k          5000   319.47 µs/op
-5k          5000   353.81 µs/op
-10k         5000   731.99 µs/op
-50k         1000   1599.91 µs/op
-100k        1000   2951.25 µs/op
-200k         500   5285.43 µs/op
-350k         100   11944.52 µs/op
-
 ## MyhtmlexParseBench
 bench iterations   average time 
 0.5k        5000   401.32 µs/op
@@ -104,17 +91,18 @@ bench iterations   average time
 200k         200   7786.63 µs/op
 350k         100   18435.59 µs/op
 
-## HtmlSanitizeExParseBench
+## ModestExParseBench
 bench iterations   average time 
-0.2k       10000   173.68 µs/op
-0.5k       10000   227.71 µs/op
-1k          2000   765.60 µs/op
-2k          1000   1791.06 µs/op
-5k           500   3970.00 µs/op
-10k          200   9017.30 µs/op
-50k           50   39859.24 µs/op
-100k          20   75973.80 µs/op
-200k          10   178685.10 µs/op
+1k         10000   181.77 µs/op
+0.2k       10000   216.83 µs/op
+0.5k       10000   221.71 µs/op
+2k          5000   319.47 µs/op
+5k          5000   353.81 µs/op
+10k         5000   731.99 µs/op
+50k         1000   1599.91 µs/op
+100k        1000   2951.25 µs/op
+200k         500   5285.43 µs/op
+350k         100   11944.52 µs/op
 
 ## TidyExParseBench
 bench iterations   average time 
@@ -128,6 +116,17 @@ bench iterations   average time
 100k         100   10168.21 µs/op
 200k         100   19607.18 µs/op
 
+## HtmlSanitizeExParseBench
+bench iterations   average time 
+0.2k       10000   173.68 µs/op
+0.5k       10000   227.71 µs/op
+1k          2000   765.60 µs/op
+2k          1000   1791.06 µs/op
+5k           500   3970.00 µs/op
+10k          200   9017.30 µs/op
+50k           50   39859.24 µs/op
+100k          20   75973.80 µs/op
+200k          10   178685.10 µs/op
 ```
 
 ## Conclusions
@@ -148,7 +147,7 @@ If you are looking for a good performance distribution over many file sizes you 
 
 However, if you need to do complex manipulations on the html string you can use `ModestEx`. With that you get [**36**](https://github.com/f34nk/modest_ex/blob/master/SELECTORS.md) CSS selectors and [**16**](https://github.com/f34nk/modest_ex/blob/master/FEATURES.md) methods to transform html strings.
 
-For html5 spec accuracy or sanitation of html there are [TidyEx](https://github.com/f34nk/tidy_ex) amd [HtmlSanitizeEx](https://github.com/rrrene/html_sanitize_ex).
+For html5 spec accuracy or user input sanitation there are [TidyEx](https://github.com/f34nk/tidy_ex) amd [HtmlSanitizeEx](https://github.com/rrrene/html_sanitize_ex).
 
 All in all, I would say, the focused nature of the tools makes it easy for the user to pick the right tool for the job.
 
