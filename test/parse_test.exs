@@ -9,6 +9,11 @@ defmodule ParseTest do
     assert result == "<html><head></head><body><h1>Hello World</h1></body></html>"
   end
 
+  test "TidyEx" do
+    result = TidyEx.parse(@html)
+    assert result == "<h1>Hello World</h1>"
+  end
+
   test "Myhtmlex" do
     result = Myhtmlex.decode(@html)
     assert result == {"html", [], [{"head", [], []}, {"body", [], [{"h1", [], ["Hello World"]}]}]}
