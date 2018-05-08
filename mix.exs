@@ -24,12 +24,12 @@ defmodule ElixirHtmlTools.MixProject do
       {:benchfella, "~> 0.3.0"},
       {:benchee_html, "~> 0.4"},
 
-      {:modest_ex, "~> 1.0.3"},
       {:floki, "~> 0.20.0"},
-      # {:html5ever, "~> 0.5.0"},
       {:meeseeks, "0.7.6"},
-      {:myhtmlex, "~> 0.2.0"}
-      # {:myhtmlex, "~> 0.2.0", runtime: false}
+      {:myhtmlex, "~> 0.2.0"},
+      {:modest_ex, "~> 1.0.3"},
+      {:tidy_ex, "~> 0.1.0-dev"},
+      {:html_sanitize_ex, "~> 1.3.0-rc3"}
     ]
   end
 end
