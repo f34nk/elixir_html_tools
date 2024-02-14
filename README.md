@@ -1,3 +1,5 @@
+# This project is not maintained anymore
+
 *I do not intend to give a complete analysis here. If something is missing or plain wrong send me a message or feel invited to participate in the [forum discussion](https://elixirforum.com/t/overview-of-available-html-tools-in-elixir/12905) or create an **Issue** or submit a **PR**.*
 
 # Html tools in Elixir
